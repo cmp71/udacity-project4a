@@ -1,0 +1,47 @@
+(.devops) [ec2-user@ip-172-31-2-30 project-ml-microservice-kubernetes]$ ./run_docker.sh 
+Sending build context to Docker daemon  59.39MB
+Step 1/6 : FROM python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> af077e7eab3f
+Step 3/6 : COPY . app.py /app/
+ ---> Using cache
+ ---> 315e65e8e18b
+Step 4/6 : RUN pip install --upgrade pip && pip install --trusted-host pypi.python.org -r requirements.txt
+ ---> Using cache
+ ---> 3cdd989c406b
+Step 5/6 : EXPOSE 80
+ ---> Using cache
+ ---> a675e7eefc36
+Step 6/6 : CMD ["python", "app.py"]
+ ---> Using cache
+ ---> 1dedc740b948
+Successfully built 1dedc740b948
+Successfully tagged devops:1.0
+REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+devops                        1.0                 1dedc740b948        22 seconds ago      1.3GB
+<none>                        <none>              d5c2dbfa488d        10 minutes ago      1.3GB
+gcr.io/k8s-minikube/kicbase   v0.0.11             e3ca409c7daf        4 weeks ago         953MB
+hadolint/hadolint             latest              02830ef1af8b        2 months ago        8.76MB
+python                        3.7.3-stretch       34a518642c76        14 months ago       929MB
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 866-498-922
+[2020-08-30 13:16:37,833] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-08-30 13:16:37,847] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-08-30 13:16:37,857] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-08-30 13:16:37,860] INFO in app: Prediction: 
+[20.35373177134412]
+172.17.0.1 - - [30/Aug/2020 13:16:37] "POST /predict HTTP/1.1" 200 -

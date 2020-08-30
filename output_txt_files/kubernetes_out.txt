@@ -1,0 +1,15 @@
+(.devops) [ec2-user@ip-172-31-2-30 project-ml-microservice-kubernetes]$ ./run_kubernetes.sh 
+pod/udacity-project4 created
+NAME               READY   STATUS              RESTARTS   AGE
+udacity-project4   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+
+
+(.devops) [ec2-user@ip-172-31-2-30 project-ml-microservice-kubernetes]$ ./run_kubernetes.sh 
+Error from server (AlreadyExists): pods "udacity-project4" already exists
+NAME               READY   STATUS    RESTARTS   AGE
+udacity-project4   1/1     Running   0          10m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
