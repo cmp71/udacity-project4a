@@ -194,3 +194,6 @@ If you are following this as a guide, Attempt #6 is currently the best option.
   * [ec2-user@ip-172-31-2-30 project-ml-microservice-kubernetes]$ cd .circleci/
   * [ec2-user@ip-172-31-2-30 .circleci]$ touch config.yml
   * Pasted in supplied text. Git commit and push.
+  * Set up circleci account as directed. Selected project, selected to use existing config.yml file. Selected build. Failed.
+    * https://pastebin.pl/view/7a2b0e99
+    * config.yml file as supplied is badly formatted.
