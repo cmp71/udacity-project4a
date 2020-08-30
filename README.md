@@ -35,18 +35,20 @@ The final working attempt is **Attempt #6**
 * Added circleci integration
 
 ### Files in repo
-app.py			The python app  
-diary.md		Comprehensive notes  
-Dockerfile		Dockerfile to build docker image with python app  
-Makefile		To setup python environment and linting  
-make_prediction.sh	Shell script to test the python app  
-model_data		App data as supplied  
-output_txt_files	Evidence of working app  
-README.md		This  
-requirements.txt	python environment dependencies  
-run_docker.sh		Shell script to create and deploy a docker image with the python app
-run_kubernetes.sh	Shell script to pull docker image and deploy to a kubernetes cluster
-upload_docker.sh	Shell script to push docker image to docker hub
+File | Purpose
+---- | -------
+app.py | The python app
+diary.md | Comprehensive notes
+Dockerfile | Dockerfile to build docker image with python app
+Makefile | To setup python environment and linting
+make_prediction.sh | Shell script to test the python app
+model_data | App data as supplied
+output_txt_files | Evidence of working app
+README.md | This
+requirements.txt | python environment dependencies
+run_docker.sh | Shell script to create and deploy a docker image with the python app
+run_kubernetes.sh | Shell script to pull docker image and deploy to a kubernetes cluster
+upload_docker.sh | Shell script to push docker image to docker hub
 
 ### Instructions
 After setting up the environment:  
