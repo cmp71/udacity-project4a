@@ -197,3 +197,6 @@ If you are following this as a guide, Attempt #6 is currently the best option.
   * Set up circleci account as directed. Selected project, selected to use existing config.yml file. Selected build. Failed.
     * https://pastebin.pl/view/7a2b0e99
     * config.yml file as supplied is badly formatted.
+    * circleci workflow started automatically after new push. Failed at linting stage due to me using docker to run hadolint and docker not being found
+      * https://pastebin.pl/view/6dbbc001
+
