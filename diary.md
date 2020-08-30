@@ -175,7 +175,7 @@ If you are following this as a guide, Attempt #6 is currently the best option.
     * Started successfully
     * Update make_prediction.sh to poll port 8000 instead of 80
     * Successfully made prediction.
-* Deleted minikube cluster with `minikube delete
+* Deleted minikube cluster with `minikube delete`
 * Upload to github
   * Generated local keypair with `ssh-keygen`
   * Added .ssh/id_rsa.pub to github
@@ -200,5 +200,8 @@ If you are following this as a guide, Attempt #6 is currently the best option.
     * circleci workflow started automatically after new push. Failed at linting stage due to me using docker to run hadolint and docker not being found
       * https://pastebin.pl/view/6dbbc001
     * Edited Makefile to run hadolint directly rather than via docker.
-    * Passes hadolint now but fails on pylint and pylint not insalled.
+    * Passes hadolint now but fails on pylint and pylint not installed.
     * Added pylint into requirements.txt
+    * Added circleci badge integration into README.md
+    * Edited README.md
+* Project complete
