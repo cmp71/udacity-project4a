@@ -189,3 +189,8 @@ If you are following this as a guide, Attempt #6 is currently the best option.
         * Opens a text editor for the commit message. Save and exit
       * `git log` to check the new no-reply email address is in place
   * `git push --set-upstream origin master` now works
+* CircleCI Integration
+  * [ec2-user@ip-172-31-2-30 project-ml-microservice-kubernetes]$ mkdir .circleci
+  * [ec2-user@ip-172-31-2-30 project-ml-microservice-kubernetes]$ cd .circleci/
+  * [ec2-user@ip-172-31-2-30 .circleci]$ touch config.yml
+  * Pasted in supplied text. Git commit and push.
