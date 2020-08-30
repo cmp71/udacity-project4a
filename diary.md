@@ -199,4 +199,6 @@ If you are following this as a guide, Attempt #6 is currently the best option.
     * config.yml file as supplied is badly formatted.
     * circleci workflow started automatically after new push. Failed at linting stage due to me using docker to run hadolint and docker not being found
       * https://pastebin.pl/view/6dbbc001
-
+    * Edited Makefile to run hadolint directly rather than via docker.
+    * Passes hadolint now but fails on pylint and pylint not insalled.
+    * Added pylint into requirements.txt
