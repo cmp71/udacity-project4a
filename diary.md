@@ -179,4 +179,13 @@ If you are following this as a guide, Attempt #6 is currently the best option.
 * Upload to github
   * Generated local keypair with `ssh-keygen`
   * Added .ssh/id_rsa.pub to github
-`
+  * `git init`
+  * `git remote add origin git@github.com:cmp71/udacity-project4a.git`
+  * `git push --set-upstream origin master`
+    * Error due to attempt to publish private email address: https://pastebin.pl/view/3340546a
+    * Fix:
+      * `git config --global user.email "12956104+cmp71@users.noreply.github.com”`
+      * `git commit --amend --reset-author`
+        * Opens a text editor for the commit message. Save and exit
+      * `git log` to check the new no-reply email address is in place
+  * `git push --set-upstream origin master` now works
